@@ -1,0 +1,53 @@
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+	position: fixed;
+	top: 0; 
+	left: 0; 
+	height: 4rem;
+	width: 100%;
+	background-color: #2F387B;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 4rem;
+	color: #ffffff;
+}
+
+.nav-links {
+	display: flex;
+	gap: 0 1.5rem;
+}
+
+.nav-links a {
+	text-decoration: none;
+	font-size: 1.125rem;
+	line-height: 1.75rem; 
+	color: #ffffff;
+}
+
+.navbar input[type=search] {
+	width: 100%;
+	padding: 5px 10px;
+	border-radius: 0.5rem;
+	outline: none;
+ }
+
+</style>
+
+<nav class="navbar">
+	<h1 >MyEcommerceCatalogue</h1>
+	<form method="get" action="search" style="width:30%;" >
+		<input type="search" name="q" placeholder="Search by category...">
+	</form>
+	<div class="nav-links">
+		<a href="<%=request.getContextPath()%>">Home</a>
+		<a href="<%=request.getContextPath()%>/catalogue">Catalogue</a>
+		<a href="<%=request.getContextPath()%>/cart">Cart</a>
+	</div>
+</nav>
